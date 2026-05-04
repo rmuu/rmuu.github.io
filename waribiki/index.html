@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="割引きは、複数割引、税込計算、送料、数量、履歴、比較、カメラ読取に対応したiPhone/iPad向け割引計算アプリです。">
+  <meta property="og:title" content="割引き - 割引計算アプリ">
+  <meta property="og:description" content="買い物前の割引、税込、送料、数量、還元をすばやく計算。">
+  <meta property="og:image" content="https://rmuu.github.io/assets/waribiki/icon.png">
+  <link rel="canonical" href="https://rmuu.github.io/waribiki/">
+  <title>割引き - 割引計算アプリ</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #232323;
+      --muted: #666;
+      --line: #ded8cf;
+      --paper: #fbfaf7;
+      --panel: #ffffff;
+      --mint: #2f8f75;
+      --coral: #d95f4d;
+      --gold: #b8892f;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", "Segoe UI", sans-serif;
+      color: var(--ink);
+      background: var(--paper);
+      line-height: 1.75;
+    }
+
+    .wrap {
+      width: min(980px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    header {
+      padding: 28px 0 18px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--ink);
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .brand img {
+      width: 34px;
+      height: 34px;
+      border-radius: 8px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 14px;
+      font-size: 0.95rem;
+    }
+
+    a { color: var(--mint); }
+    .nav-links a { text-decoration: none; }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 36px;
+      align-items: center;
+      padding: 58px 0 42px;
+    }
+
+    .hero h1 {
+      margin: 0;
+      font-size: clamp(2.4rem, 6vw, 4.8rem);
+      line-height: 1.03;
+      letter-spacing: 0;
+    }
+
+    .lead {
+      margin: 22px 0 0;
+      color: var(--muted);
+      font-size: 1.12rem;
+      max-width: 620px;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      padding: 10px 16px;
+      border: 1px solid var(--ink);
+      border-radius: 8px;
+      color: var(--ink);
+      font-weight: 700;
+      text-decoration: none;
+      background: var(--panel);
+    }
+
+    .button.primary {
+      background: var(--ink);
+      color: #fff;
+    }
+
+    .product {
+      padding: 24px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--panel);
+    }
+
+    .product img {
+      width: 108px;
+      height: 108px;
+      border-radius: 22px;
+      display: block;
+      margin-bottom: 20px;
+    }
+
+    .total {
+      font-size: clamp(2rem, 6vw, 3.8rem);
+      line-height: 1;
+      font-weight: 800;
+      letter-spacing: 0;
+      margin: 10px 0;
+    }
+
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 18px;
+    }
+
+    .chip {
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 6px 10px;
+      color: var(--muted);
+      font-size: 0.9rem;
+      background: #f7f3ed;
+    }
+
+    section {
+      padding: 34px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    h2 {
+      margin: 0 0 16px;
+      font-size: 1.55rem;
+      letter-spacing: 0;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+
+    .feature {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--panel);
+      padding: 18px;
+      min-height: 150px;
+    }
+
+    .feature strong {
+      color: var(--ink);
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .feature p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .note {
+      color: var(--muted);
+      max-width: 760px;
+    }
+
+    footer {
+      border-top: 1px solid var(--line);
+      color: #8a8379;
+      font-size: 0.9rem;
+      padding: 26px 0 38px;
+    }
+
+    @media (max-width: 760px) {
+      header { padding-top: 18px; }
+      nav { align-items: flex-start; flex-direction: column; }
+      .hero { grid-template-columns: 1fr; padding-top: 36px; }
+      .grid { grid-template-columns: 1fr; }
+      .product { padding: 18px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <nav>
+        <a class="brand" href="https://rmuu.github.io/waribiki/">
+          <img src="../assets/waribiki/icon.png" alt="">
+          <span>割引き</span>
+        </a>
+        <div class="nav-links">
+          <a href="https://apps.apple.com/app/id405946281">App Store</a>
+          <a href="../waribiki-support/">サポート</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="wrap">
+      <div class="hero">
+        <div>
+          <h1>割引き</h1>
+          <p class="lead">セール価格、税込、送料、数量、ポイント還元までまとめて計算できる、買い物のための割引計算アプリです。</p>
+          <div class="actions">
+            <a class="button primary" href="https://apps.apple.com/app/id405946281">App Storeで見る</a>
+            <a class="button" href="../waribiki-support/">サポートを見る</a>
+          </div>
+        </div>
+
+        <div class="product" aria-label="割引きアプリの概要">
+          <img src="../assets/waribiki/icon.png" alt="割引きアプリアイコン">
+          <div>支払総額</div>
+          <div class="total">¥3,184</div>
+          <div>節約 ¥796 / 実効割引 20%</div>
+          <div class="chips">
+            <span class="chip">二重割引</span>
+            <span class="chip">税込</span>
+            <span class="chip">送料</span>
+            <span class="chip">履歴</span>
+          </div>
+        </div>
+      </div>
+
+      <section>
+        <h2>主な機能</h2>
+        <div class="grid">
+          <div class="feature">
+            <strong>複数割引を順番に計算</strong>
+            <p>%OFF、円引き、最終価格、ポイント還元を組み合わせて実際の支払額を確認できます。</p>
+          </div>
+          <div class="feature">
+            <strong>買い物の総額をまとめて確認</strong>
+            <p>税率、チップ、送料、数量を含めて、1点あたりの価格や節約額を表示します。</p>
+          </div>
+          <div class="feature">
+            <strong>比較・履歴・ウィジェット</strong>
+            <p>候補価格の比較、計算履歴の保存、直近計算を表示するウィジェットに対応しています。</p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>AI機能について</h2>
+        <p class="note">AI診断は任意機能です。設定画面でプロキシURLまたは開発用APIキーを設定した場合のみ利用できます。通常の割引計算はAI接続なしで動作します。</p>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <p>&copy; 2026 Ryota Murakami. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

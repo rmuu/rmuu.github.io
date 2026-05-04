@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="iPhone/iPad向け割引計算アプリ「割引き」のサポートページです。お問い合わせ、よくある質問、プライバシー情報を掲載しています。">
+  <link rel="canonical" href="https://rmuu.github.io/waribiki-support/">
+  <title>割引き - サポート</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #242424;
+      --muted: #666;
+      --line: #ded8cf;
+      --paper: #fbfaf7;
+      --panel: #fff;
+      --mint: #2f8f75;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", "Segoe UI", sans-serif;
+      color: var(--ink);
+      background: var(--paper);
+      line-height: 1.75;
+    }
+
+    .wrap {
+      width: min(760px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    header {
+      padding: 34px 0 22px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .brand {
+      display: flex;
+      gap: 14px;
+      align-items: center;
+    }
+
+    .brand img {
+      width: 58px;
+      height: 58px;
+      border-radius: 14px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 2rem;
+      letter-spacing: 0;
+    }
+
+    .sub {
+      color: var(--muted);
+      margin: 4px 0 0;
+    }
+
+    main { padding: 28px 0 42px; }
+
+    section {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--panel);
+      padding: 22px;
+      margin: 16px 0;
+    }
+
+    h2 {
+      margin: 0 0 12px;
+      font-size: 1.25rem;
+      letter-spacing: 0;
+    }
+
+    h3 {
+      margin: 22px 0 6px;
+      font-size: 1rem;
+    }
+
+    p { margin: 0 0 12px; }
+    ul { margin: 0; padding-left: 1.25em; }
+    li + li { margin-top: 4px; }
+    a { color: var(--mint); }
+
+    .contact {
+      background: #f4f1eb;
+      border-radius: 8px;
+      padding: 14px;
+      margin-top: 12px;
+    }
+
+    .small {
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    footer {
+      color: #8a8379;
+      font-size: 0.9rem;
+      padding-bottom: 36px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <div class="brand">
+        <img src="../assets/waribiki/icon.png" alt="割引きアプリアイコン">
+        <div>
+          <h1>割引き サポート</h1>
+          <p class="sub">割引計算アプリ「割引き」のお問い合わせ・ヘルプ</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="wrap">
+      <section>
+        <h2>お問い合わせ</h2>
+        <p>ご質問、不具合の報告、ご要望は以下のメールアドレスまでご連絡ください。</p>
+        <div class="contact">
+          <strong>開発者:</strong> Ryota Murakami<br>
+          <strong>メール:</strong> <a href="mailto:no.61916@gmail.com">no.61916@gmail.com</a>
+        </div>
+      </section>
+
+      <section>
+        <h2>よくある質問</h2>
+
+        <h3>複数の割引はどう計算されますか？</h3>
+        <p>登録した順番に割引を適用します。たとえば20%OFFのあとに10%OFFを設定した場合、最初の割引後価格に対して次の割引を計算します。</p>
+
+        <h3>AI機能を使わなくても計算できますか？</h3>
+        <p>はい。通常の割引計算、履歴、比較、カメラ読取などはAI接続なしで利用できます。AI診断は設定した場合のみ有効になる任意機能です。</p>
+
+        <h3>カメラは何に使われますか？</h3>
+        <p>価格タグやレシートの金額を読み取るために使います。読み取った内容は、割引計算へ反映する目的で利用されます。</p>
+      </section>
+
+      <section>
+        <h2>プライバシー</h2>
+        <ul>
+          <li>本アプリは広告目的のトラッキングを行いません。</li>
+          <li>計算履歴や設定は主にお使いの端末内に保存されます。</li>
+          <li>カメラは価格タグやレシートの読取のためにのみ使用します。</li>
+          <li>AI機能を有効化した場合、入力内容が設定先のプロキシまたはOpenAI APIへ送信されることがあります。</li>
+          <li>開発者がユーザーの計算履歴を販売することはありません。</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>リンク</h2>
+        <p><a href="../waribiki/">マーケティングページ</a></p>
+        <p><a href="https://apps.apple.com/app/id405946281">App Storeで見る</a></p>
+      </section>
+
+      <p class="small">最終更新日: 2026年5月5日</p>
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <p>&copy; 2026 Ryota Murakami. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
