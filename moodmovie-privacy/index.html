@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="iPhone/iPad向け映画推薦アプリ「今日の一本」のプライバシーポリシーです。">
+  <link rel="canonical" href="https://rmuu.github.io/moodmovie-privacy/">
+  <title>今日の一本 - プライバシーポリシー</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #191a1f;
+      --muted: #666872;
+      --paper: #fbf8f2;
+      --panel: #ffffff;
+      --line: #e4ddd2;
+      --accent: #ea7b4f;
+      --blue: #4565b3;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", "Segoe UI", sans-serif;
+      color: var(--ink);
+      background: var(--paper);
+      line-height: 1.75;
+    }
+    .wrap { width: min(820px, calc(100% - 32px)); margin: 0 auto; }
+    header { padding: 34px 0 22px; border-bottom: 1px solid var(--line); }
+    .brand { display: flex; gap: 14px; align-items: center; }
+    .brand img { width: 58px; height: 58px; border-radius: 14px; }
+    h1 { margin: 0; font-size: 2rem; letter-spacing: 0; }
+    h2 { margin: 30px 0 10px; font-size: 1.24rem; letter-spacing: 0; }
+    p { margin: 0 0 12px; }
+    ul { margin: 0 0 14px; padding-left: 1.25em; }
+    li + li { margin-top: 4px; }
+    main { padding: 28px 0 46px; }
+    .panel {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 24px;
+    }
+    .sub, .small { color: var(--muted); }
+    a { color: var(--blue); }
+    footer { color: #8a8379; font-size: 0.9rem; padding-bottom: 34px; text-align: center; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <div class="brand">
+        <img src="../assets/moodmovie/icon.png" alt="今日の一本アプリアイコン">
+        <div>
+          <h1>今日の一本 プライバシーポリシー</h1>
+          <p class="sub">最終更新日: 2026年5月10日</p>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main>
+    <div class="wrap">
+      <div class="panel">
+        <p>「今日の一本」は、今日の気分や映画の好みに合わせて映画を推薦するiPhone/iPadアプリです。本アプリは、ユーザーの映画の好みをできるだけ端末内で扱い、広告目的のトラッキングを行いません。</p>
+
+        <h2>収集する情報</h2>
+        <p>本アプリの開発者は、ユーザーの個人情報を開発者サーバーへ送信・保存しません。本アプリ内で扱う以下の情報は、原則としてお使いの端末内に保存されます。</p>
+        <ul>
+          <li>診断への回答</li>
+          <li>好き、普通、苦手、未視聴として登録した映画情報</li>
+          <li>保存した推薦履歴</li>
+          <li>AI推薦の有効/無効、利用するAIプロバイダ、モデル名などの設定</li>
+          <li>TMDb Read Access TokenやAI APIキー</li>
+        </ul>
+        <p>APIキーやTMDb Read Access Tokenなどの認証情報はKeychainに保存します。診断履歴や好みメモなどのアプリ設定はUserDefaultsに保存します。</p>
+
+        <h2>外部サービスへの送信</h2>
+        <p>本アプリは、ユーザーが設定した場合のみ外部サービスへ通信します。</p>
+        <ul>
+          <li>TMDb: TMDb認証情報を設定した場合、映画候補、映画詳細、ポスター画像を取得するために映画タイトル、公開年、検索クエリなどをTMDbへ送信することがあります。</li>
+          <li>AIプロバイダ: BYOKモードを有効化し、自分のAPIキーを保存した場合、診断回答、好みメモの要約、候補映画情報を選択したAIプロバイダへ送信し、推薦理由の生成に利用します。</li>
+          <li>レビューサイト: IMDb、Rotten Tomatoes、Filmarks、映画.comなどの検索リンクを開いた場合、ブラウザまたは各サイトのプライバシーポリシーが適用されます。</li>
+        </ul>
+        <p>外部サービスで処理される情報は、各サービスの利用規約およびプライバシーポリシーに従って扱われます。</p>
+
+        <h2>利用目的</h2>
+        <ul>
+          <li>映画推薦の精度向上</li>
+          <li>診断結果と過去の推薦履歴の表示</li>
+          <li>ポスター画像、映画情報、レビュー検索リンクの表示</li>
+          <li>ユーザーが有効化したAI推薦の実行</li>
+        </ul>
+        <p>広告配信、第三者への販売、ユーザー追跡には利用しません。</p>
+
+        <h2>トラッキングと広告</h2>
+        <p>本アプリは、広告目的のトラッキングを行いません。IDFAを取得せず、広告ネットワークも組み込んでいません。</p>
+
+        <h2>データの削除</h2>
+        <p>端末内に保存された情報は、アプリの削除により削除できます。AI APIキーやTMDb認証情報は、アプリ内の設定画面から削除できます。</p>
+
+        <h2>お問い合わせ</h2>
+        <p><a href="../moodmovie-support/">サポートページ</a>をご確認ください。</p>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <div class="wrap">
+      <p>&copy; 2026 今日の一本. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
+

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="今日の気分で映画を選ぶiPhone/iPadアプリ「今日の一本」の紹介ページです。">
+  <link rel="canonical" href="https://rmuu.github.io/moodmovie/">
+  <title>今日の一本 - 気分で選ぶ映画診断</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #191a1f;
+      --muted: #686a72;
+      --paper: #fbf8f2;
+      --line: #e4ddd2;
+      --orange: #ea7b4f;
+      --blue: #4565b3;
+      --teal: #47a9bf;
+      --panel: rgba(255,255,255,0.82);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", "Segoe UI", sans-serif;
+      color: var(--ink);
+      background: var(--paper);
+      line-height: 1.7;
+    }
+    .wrap { width: min(1080px, calc(100% - 32px)); margin: 0 auto; }
+    header {
+      min-height: 82vh;
+      padding: 28px 0 44px;
+      background:
+        linear-gradient(135deg, rgba(25,26,31,.72), rgba(69,101,179,.46)),
+        radial-gradient(circle at 20% 25%, rgba(234,123,79,.62), transparent 32%),
+        linear-gradient(135deg, #26324f, #61b6c9 72%);
+      color: white;
+      display: flex;
+      flex-direction: column;
+    }
+    nav { display: flex; align-items: center; justify-content: space-between; gap: 18px; }
+    .brand { display: flex; align-items: center; gap: 12px; font-weight: 800; }
+    .brand img { width: 44px; height: 44px; border-radius: 12px; }
+    .navlinks { display: flex; gap: 16px; flex-wrap: wrap; }
+    .navlinks a { color: rgba(255,255,255,.9); text-decoration: none; font-weight: 700; }
+    .hero {
+      flex: 1;
+      display: grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(320px, .75fr);
+      gap: 36px;
+      align-items: center;
+      padding-top: 52px;
+    }
+    h1 { margin: 0; font-size: clamp(3rem, 7vw, 6.8rem); line-height: 0.95; letter-spacing: 0; }
+    .lead { margin-top: 22px; font-size: clamp(1.1rem, 2.2vw, 1.55rem); max-width: 680px; color: rgba(255,255,255,.9); }
+    .phone {
+      width: min(330px, 100%);
+      margin: 0 auto;
+      border: 10px solid rgba(255,255,255,.72);
+      border-radius: 42px;
+      background: #f8f4ec;
+      box-shadow: 0 30px 80px rgba(0,0,0,.28);
+      padding: 22px;
+      color: var(--ink);
+    }
+    .screen-title { font-size: 1.6rem; font-weight: 900; margin: 8px 0 18px; }
+    .poster {
+      aspect-ratio: 3 / 4;
+      border-radius: 8px;
+      background: linear-gradient(135deg, #25429c, #6cc3d3);
+      padding: 18px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      color: white;
+    }
+    .poster b { font-size: 2.2rem; line-height: 1; }
+    .pillrow { display: flex; gap: 8px; margin-top: 14px; }
+    .pill { background: white; border-radius: 999px; padding: 8px 12px; color: var(--blue); font-weight: 900; }
+    main { padding: 42px 0 52px; }
+    .features { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .card { background: white; border: 1px solid var(--line); border-radius: 8px; padding: 22px; }
+    h2 { margin: 0 0 10px; font-size: 1.25rem; }
+    p { margin: 0 0 12px; }
+    a { color: var(--blue); }
+    footer { color: #8a8379; font-size: .9rem; padding: 0 0 34px; text-align: center; }
+    @media (max-width: 820px) {
+      header { min-height: 92vh; }
+      .hero { grid-template-columns: 1fr; padding-top: 42px; }
+      .phone { width: min(300px, 86%); }
+      .features { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <nav>
+        <div class="brand">
+          <img src="../assets/moodmovie/icon.png" alt="今日の一本アプリアイコン">
+          <span>今日の一本</span>
+        </div>
+        <div class="navlinks">
+          <a href="../moodmovie-support/">サポート</a>
+          <a href="../moodmovie-privacy/">プライバシー</a>
+        </div>
+      </nav>
+      <div class="hero">
+        <div>
+          <h1>今日の一本</h1>
+          <p class="lead">スワイプで今の気分を答えるだけ。好みメモとローカル推薦、任意のBYOK AI推薦で、今夜見る映画をすばやく決めるアプリです。</p>
+        </div>
+        <div class="phone" aria-label="アプリ画面イメージ">
+          <div class="screen-title">今の気分は？</div>
+          <div class="poster">
+            <span>1 / 20</span>
+            <b>余韻に浸りたい</b>
+            <span>← NO　YES →</span>
+          </div>
+          <div class="pillrow">
+            <span class="pill">YES</span>
+            <span class="pill">NO</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main>
+    <div class="wrap">
+      <div class="features">
+        <section class="card">
+          <h2>スワイプ診断</h2>
+          <p>毎回組み替わるYES/NO診断で、作業感を減らしながら今日の気分を拾います。</p>
+        </section>
+        <section class="card">
+          <h2>好みメモ</h2>
+          <p>好き、普通、苦手、未視聴を登録して、苦手な作品が結果に出にくい推薦へ育てます。</p>
+        </section>
+        <section class="card">
+          <h2>任意のAI推薦</h2>
+          <p>APIキーを入れなくても利用可能。BYOKモードを有効にしたときだけAI推薦を使います。</p>
+        </section>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <div class="wrap">
+      <p>&copy; 2026 今日の一本. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
+

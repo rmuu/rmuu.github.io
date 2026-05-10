@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="iPhone/iPad向け映画推薦アプリ「今日の一本」のサポートページです。">
+  <link rel="canonical" href="https://rmuu.github.io/moodmovie-support/">
+  <title>今日の一本 - サポート</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #191a1f;
+      --muted: #666872;
+      --paper: #fbf8f2;
+      --panel: #ffffff;
+      --line: #e4ddd2;
+      --accent: #ea7b4f;
+      --blue: #4565b3;
+      --green: #2f8c71;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", "Segoe UI", sans-serif;
+      color: var(--ink);
+      background: var(--paper);
+      line-height: 1.75;
+    }
+    .wrap { width: min(820px, calc(100% - 32px)); margin: 0 auto; }
+    header { padding: 34px 0 22px; border-bottom: 1px solid var(--line); }
+    .brand { display: flex; gap: 14px; align-items: center; }
+    .brand img { width: 58px; height: 58px; border-radius: 14px; }
+    h1 { margin: 0; font-size: 2rem; letter-spacing: 0; }
+    h2 { margin: 0 0 12px; font-size: 1.24rem; letter-spacing: 0; }
+    h3 { margin: 20px 0 6px; font-size: 1rem; }
+    p { margin: 0 0 12px; }
+    main { padding: 28px 0 46px; }
+    section {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 24px;
+      margin: 16px 0;
+    }
+    .sub, .small { color: var(--muted); }
+    a { color: var(--blue); }
+    ul { margin: 0; padding-left: 1.25em; }
+    footer { color: #8a8379; font-size: 0.9rem; padding-bottom: 34px; text-align: center; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <div class="brand">
+        <img src="../assets/moodmovie/icon.png" alt="今日の一本アプリアイコン">
+        <div>
+          <h1>今日の一本 サポート</h1>
+          <p class="sub">気分で選ぶ映画診断アプリのヘルプ</p>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main>
+    <div class="wrap">
+      <section>
+        <h2>よくある質問</h2>
+        <h3>AI APIキーなしでも使えますか？</h3>
+        <p>はい。キーなしでも、ローカル映画データとルールベース推薦で診断できます。AI推薦は任意機能です。</p>
+        <h3>ポスターが表示されない場合は？</h3>
+        <p>TMDb Read Access Tokenをアプリ内の好みメモ画面に保存すると、TMDbから実ポスターを取得します。未設定または通信失敗時は、アプリ内の代替ビジュアルを表示します。</p>
+        <h3>好みメモや履歴はどこに保存されますか？</h3>
+        <p>端末内に保存されます。AI APIキーとTMDb認証情報はKeychainに保存します。</p>
+        <h3>レビューサイトの点数はアプリ内で直接取得しますか？</h3>
+        <p>TMDb評価はAPIから取得した値を表示します。IMDb、Rotten Tomatoes、Filmarks、映画.comは公式サイトまたは検索ページへのリンクとして表示します。</p>
+      </section>
+      <section>
+        <h2>リンク</h2>
+        <p><a href="../moodmovie/">アプリ紹介ページ</a></p>
+        <p><a href="../moodmovie-privacy/">プライバシーポリシー</a></p>
+      </section>
+      <p class="small">最終更新日: 2026年5月10日</p>
+    </div>
+  </main>
+  <footer>
+    <div class="wrap">
+      <p>&copy; 2026 今日の一本. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
+
